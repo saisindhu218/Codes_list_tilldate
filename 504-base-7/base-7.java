@@ -5,10 +5,10 @@ class Solution {
         if(num == 0){
             return "0";
         }
-        if(num < 0){
+        if(num < 0){               // for negative numbers
            temp = -num;
         }else{
-            temp = num;
+            temp = num;      // for +ve numbers
         }
         while(temp>0){
             int digit = temp % 7;
@@ -17,9 +17,9 @@ class Solution {
         }
 
         if(num > 0){
-        return answer;
+        return answer;                   // for +ve numbers
         }else{
-            return answer = "-" + answer;
+            return answer = "-" + answer;           // for negative numbers
         }
     }
 
