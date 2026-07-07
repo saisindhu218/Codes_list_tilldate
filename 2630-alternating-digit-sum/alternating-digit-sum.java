@@ -11,12 +11,12 @@ class Solution {
        while(temp>0){
         int digit = temp % 10;
         temp = temp / 10;
-        count--;
-        if(count % 2 == 0){
+        if(count % 2 != 0){
             sum = sum + digit;
         }else{
             sum = sum - digit;
         }
+         count--;
        }
      return sum;
     }
