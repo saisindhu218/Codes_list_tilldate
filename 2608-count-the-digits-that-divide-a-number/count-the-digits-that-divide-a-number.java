@@ -4,7 +4,7 @@ class Solution {
     int count = 0;
     while(ori> 0){
         int digit = ori % 10;
-        if(num % digit == 0){
+        if((digit !=0) && (num % digit == 0)){
             count++;
         }
         ori = ori / 10;
