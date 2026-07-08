@@ -1,17 +1,18 @@
 class Solution {
     public boolean isThree(int n) {
-        int check = 1;
+        int check = 0;
         int count = 0;
         if ( n == 0 ){
             return false;      // if number is 0 
         }
 
-        for ( int i = 1; i <= Math.sqrt(n); i++){
-            if ( i *i == n) {            // this loop is to identify square root of num
+        for ( int i = 1; i <= n; i++){
+            if ( i * i == n) {            // this loop is to identify square root of num
                 check = i;              // i.e if num = 25      5 * 5 = 25
+                break;
             }                            // so 5 is squareroot of 25
             if ( i * i > n ){
-                return false;
+                return false;            // this is imp like if sometimes root is smalled than the i 
             } 
         }
 
