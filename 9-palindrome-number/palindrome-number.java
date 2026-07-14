@@ -1,19 +1,23 @@
 class Solution {
     public boolean isPalindrome(int x) {
-       int temp = x;
-       int answer = 0;
-       if(x == 0){
-        return true;
+        int original = x;
+        int rev = 0;
+
+        if ( x == 0){
+            return true;
+        }
+
+        if ( x < 0 ){
+            return false;
+        }
+ 
+       while ( original >= 1){
+            int digit = original % 10;
+            original = original / 10;
+            rev = rev * 10 + digit;
        }
-       if(x < 0){
-        return false;
-       }
-       while(temp > 0){
-        int digit = temp % 10;
-        temp = temp / 10;
-        answer = answer * 10 + digit;
-       } 
-       if(answer == x){
+
+       if ( rev == x){
         return true;
        }else{
         return false;
