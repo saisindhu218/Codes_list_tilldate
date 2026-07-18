@@ -12,6 +12,7 @@ class Solution {
                 first++;
                 nums[first] = nums[second];
                 n++;
+                second++;
             }
         }
         return n;
