@@ -1,12 +1,16 @@
 class Solution {
     public int[] runningSum(int[] nums) {
         int[] result = new int[nums.length];
-        for(int i=0; i<nums.length; i++){
+        int i=0;
+        while( i<nums.length ){
             int sum =0;
-            for(int j=0; j<=i; j++){
+            int j=0;
+            while( j<=i){
                 sum = sum + nums[j];
+                j++;
             }
             result[i] = sum;
+            i++;
         }
         return result;
     }
