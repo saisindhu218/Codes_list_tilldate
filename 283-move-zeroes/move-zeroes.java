@@ -3,7 +3,7 @@ class Solution {
         int write = 0;
         int read = 0;
 
-        for(int i = 0; i <= nums.length-1; i++){
+        while( read <= nums.length-1 ){
             if(nums[read] == 0){
                read++;
             }else{
